@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Use this CDN link in the head section -->
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: linear-gradient(to bottom, #259d89 20%, #dedede 20%);
+      }
+
+      .container {
+        width: 80%;
+        display: flex;
+        height: 80vh; /* Adjust the height as needed */
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .chat-list {
+        width: 30%;
+        /* background-color: #f1f1f1; */
+        margin: 0;
+      }
+      .chat-list-header {
+        background-color: #ebe7e7;
+        padding:10px 8px;
+        margin-bottom: 5px;
+      }
+      .chat-list-header1 {
+        background-color: #ebe7e7;
+        padding:10px 8px;
+        margin-bottom: 5px;
+      }
+      .open-chat {
+        position: relative;
+        /* flex-grow: 1; */
+        background-color: #ebdcdc;
+        width: 100%;
+      }
+      .search-input {
+        width: 96%;
+        background-color: #ffffff;
+        border: 1px solid rgb(232, 232, 232);
+        padding: 10px 5px;
+        color: grey;
+        border-radius: 5px;
+        margin-bottom: 5px;
+      }
+      .search-input1 {
+        background-color: #ffffff;
+        border: 1px solid rgb(232, 232, 232);
+        padding: 10px 5px;
+        color: grey;
+        border-radius: 5px;
+        width: 100%;
+        margin: 0;
+      }
+      .chat-item{
+        display: flex;
+        justify-content: space-between;
+        padding:15px 5px;
+        border-bottom: 1px solid rgb(232, 232, 232);
+        /* border-top: 1px solid rgb(232, 232, 232); */
+        margin-bottom: 5px;
+
+
+      }
+      .msg{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+      } 
+      .text-message {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        background-color: #e5e5e5;
+      }
+      
+      /* Responsive styles */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          height: auto;
+        }
+
+        .chat-list,
+        .open-chat {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+    <title>WhatsApp-like Chat Layout</title>
+    
+  </head>
+  
+  <body>
+    
+    <script src="https://kit.fontawesome.com/6875107a37.js" crossorigin="anonymous"></script>
+    <div class="container">
+      <div class="chat-list">
+        <div class="chat-list-header">
+          <div><img src="/assets/images/avatar.svg" alt="avatar" /></div>
+          <div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <!-- chat search -->
+        <div>
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search or start new chat"
+          />
+        </div>
+        <!-- Chat list content goes here -->
+        <div class="chat-item">
+          <div class="msg">
+            <div>
+              <img class="chat-avatar" src="/assets/images/avatar.svg" alt="" />
+            </div>
+            <div class="">
+              <div style="font-size: 14px;">Dee 2</div>
+              <div style="font-size: 12px;color: #878787; margin-top: 6px;">How are you</div>
+              <i class="fa fa-camera-retro"></i> 
+            </div>
+          </div>
+          <div style="font-size: 10px; display: flex; align-items: start; color: #878787;">
+            12:55 PM
+          </div>
+        </div>
+        <div class="chat-item">
+          <div class="msg">
+            <div>
+              <img class="chat-avatar" src="/assets/images/avatar.svg" alt="" />
+            </div>
+            <div class="">
+              <div style="font-size: 14px;">Dee 2</div>
+              <div style="font-size: 12px;color: #878787; margin-top: 6px;"><i class="fas fa-heart"></i> How are you</div>
+            </div>
+          </div>
+          <div style="font-size: 10px; display: flex; align-items: start; color: #878787;">
+            12:55 PM
+          </div>
+        </div>
+      </div>
+      <!-- chat header -->
+
+      <div class="open-chat">
+        <!-- Open chat content goes here -->
+        <div class="chat-list-header1">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                
+            <div><img src="/assets/images/avatar.svg" alt="avatar" /></div>
+            <div style="font-size: 16px;">
+                Dee 2
+            </div>
+            </div>
+            <div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+            <div style="position: absolute; bottom:  70px; width: 100%;">
+              <div style="font-size: 10px; display: flex; justify-content: center; width: 100%; margin-bottom: 15px;">
+                  <span style=" background-color: #cfe5f8; padding: 5px 10px;">JANUARY 15, 2015</span>
+              </div>
+              <div style="font-size: 13px; display: flex; justify-content: end; width: 100%; ">
+                  <div style=" background-color: #ddf3ca; padding: 15px 10px; border-radius: 7px; margin-bottom: 5px;">
+                    <div style="margin-bottom: 7px; color: #4f4f4f;">Hi! Just Testing WhatsApp on the web for work!</div>
+                    <div style="font-size: 10px; font-weight: 300; color: #878787; display: flex; justify-content: end; width: 100%;  ">12: 53 PM</div>
+                  </div>
+                  
+              </div>
+              <div style="font-size: 13px; display: flex; justify-content: end; width: 100%; ">
+                  <div style=" background-color: #ddf3ca; padding: 15px 10px; border-radius: 7px; margin-bottom: 5px;">
+                    <div style="margin-bottom: 7px; color: #4f4f4f;">How are you?</div>
+                    <div style="font-size: 10px; font-weight: 300; color: #878787; display: flex; justify-content: end; width: 100%;  ">12: 53 PM</div>
+                  </div>
+                  
+              </div>
+              
+
+          </div>
+        <div class="text-message">
+            <div style="padding:10px 7px;"><img src="/assets/images/emoji.svg" alt="emo"></div>
+            <div style="padding: 10px 10px 10px 0; width: 100%;" ><input  class="search-input1" type="text"></div>
+            <div style="padding: 10px;"><img src="/assets//images/vn.svg" alt="vn"></div>
+        </div>
+        <!-- Add more messages as needed -->
+      </div>
+    </div>
+  </body><script src="https://kit.fontawesome.com/6875107a37.js" crossorigin="anonymous"></script>
+</html>
